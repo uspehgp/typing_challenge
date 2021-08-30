@@ -14,4 +14,9 @@ export class AppComponent {
   onInput(value: string) {
     this.enteredText = value;
   }
+
+  compare(letter: string, enteredTextElement: string) {
+    if (!enteredTextElement) return 'pending'
+    return letter===enteredTextElement ? 'correct': 'incorrect'
+  }
 }
